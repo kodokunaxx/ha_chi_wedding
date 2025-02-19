@@ -933,7 +933,7 @@
       <div
         class="uk-position-relative uk-visible-toggle uk-light"
         tabindex="-1"
-        uk-slideshow="ratio: false; autoplay: true; autoplay-interval: 1500; animation: fade"
+        uk-slideshow="ratio: false; autoplay: true; autoplay-interval: 2500; animation: fade"
       >
         <div class="uk-slideshow-items" uk-height-viewport="offset-top: true; ">
           <div>
@@ -1717,7 +1717,7 @@
                     fetchpriority="high"
                     decoding="async"
                     class="alignnone size-medium wp-image-2119"
-                    src="https://weddingday.com.vn/wp-content/uploads/2024/09/QR-300x225.webp"
+                    src="images/QR a.jpg"
                     alt=""
                     width="300"
                     height="225"
@@ -1725,8 +1725,8 @@
                   />
                 </p>
                 <p><strong>Mạnh Hà</strong></p>
-                <p>Ngân hàng : <strong>MBBank</strong></p>
-                <p>STK : <strong>123456789</strong></p>
+                <p>Ngân hàng : <strong>TechcomBank</strong></p>
+                <p>STK : <strong>19036225619013</strong></p>
               </div>
             </div>
             <div>
@@ -1737,7 +1737,7 @@
                   <img
                     decoding="async"
                     class="alignnone size-medium wp-image-2119"
-                    src="https://weddingday.com.vn/wp-content/uploads/2024/09/QR-300x225.webp"
+                    src="images/QR b.jpg"
                     alt=""
                     width="300"
                     height="225"
@@ -1745,8 +1745,8 @@
                   />
                 </p>
                 <p><strong>Linh Chi</strong></p>
-                <p>Ngân hàng : <strong>MBBank</strong></p>
-                <p>STK :<strong> 0935653555</strong></p>
+                <p>Ngân hàng : <strong>VietinBank</strong></p>
+                <p>STK :<strong> 101870261914</strong></p>
               </div>
             </div>
           </div>
@@ -1824,33 +1824,16 @@
   <script src="js/main-wedding.js" id="main wedding-js"></script>
   <script src="js/main.js" id="main-js"></script>
   <script>
-    window.addEventListener("load", () => {
-      // Preloader
-
-      setTimeout(() => {
-        $(".preload").fadeOut("slow");
-      }, 1000);
-    });
-    $('head link[rel="icon"]').attr("href", "images/FAVICON-5.png");
-    $("head title").text("💕Mạnh Hà ❤️ Linh Chi💕");
-    $(".selectpicker").selectpicker();
-  </script>
-  <script>
-    $(":root").css("--primary-color", "");
-    $(":root").css("--primary-hover", "");
-    $(":root").css("--soft-primary", "");
-    $(":root").css("--secondary-color", "");
-  </script>
-  <script>
     var myAudio = document.getElementById("audio_play");
+    myAudio.pause();
     // myAudio.play();
-    if (myAudio.paused) {
-      $(".btn_play").html('<i class="ti ti-player-play "></i>');
-    } else {
-      $(".btn_play").html(
-        '<span class="spinner-border border-0 d-flex justify-content-center align-items-center"><i class="ti ti-music "></i> </span>'
-      );
-    }
+    // if (myAudio.paused) {
+    //   $(".btn_play").html('<i class="ti ti-player-play "></i>');
+    // } else {
+    //   $(".btn_play").html(
+    //     '<span class="spinner-border border-0 d-flex justify-content-center align-items-center"><i class="ti ti-music "></i> </span>'
+    //   );
+    // }
     function togglePlay() {
       if (myAudio.paused) {
         myAudio.play();
@@ -1862,5 +1845,23 @@
         $(".btn_play").html('<i class="ti ti-player-play "></i>');
       }
     }
+  </script>
+  <script>
+    window.addEventListener("load", () => {
+      // Preloader
+      $(".preload").click(function () {
+        $(".preload").fadeOut("slow");
+        togglePlay();
+      });
+    });
+    $('head link[rel="icon"]').attr("href", "images/FAVICON-5.png");
+    $("head title").text("💕Mạnh Hà ❤️ Linh Chi💕");
+    $(".selectpicker").selectpicker();
+  </script>
+  <script>
+    $(":root").css("--primary-color", "");
+    $(":root").css("--primary-hover", "");
+    $(":root").css("--soft-primary", "");
+    $(":root").css("--secondary-color", "");
   </script>
 </html>
