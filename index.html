@@ -1789,7 +1789,7 @@
   <div class="audio-play d-none">
     <audio id="audio_play" controls autoplay preload="auto">
       <source
-        src="media/The-perfect-wedding-song-mashup-Ni-Co-cover.mp3"
+        src="media/A_Thousand_Year.mp3"
         type="audio/mpeg"
       />
     </audio>
@@ -1845,11 +1845,11 @@
     var myAudio = document.getElementById("audio_play");
     // myAudio.play();
     if (myAudio.paused) {
-      $(".btn_play").html('<i class="ti ti-player-play "></i>');
-    } else {
       $(".btn_play").html(
         '<span class="spinner-border border-0 d-flex justify-content-center align-items-center"><i class="ti ti-music "></i> </span>'
       );
+    } else {
+      $(".btn_play").html('<i class="ti ti-player-play "></i>');
     }
     function togglePlay() {
       if (myAudio.paused) {
