@@ -1754,7 +1754,11 @@
                 </p>
                 <p><strong>Mạnh Hà</strong></p>
                 <p>Ngân hàng : <strong>TechcomBank</strong></p>
-                <p>STK : <strong>19036225619013</strong></p>
+                <div class="copy-bank-account-text" style="display: flex; justify-content: center; align-items: center; cursor: pointer;" onclick="handleCopyToClipboard('19036225619013', this)">
+                  <p>STK : <strong>19036225619013</strong></p>
+                  <i class="ri-file-copy-line copy-bank-account-icon" style="margin-left: 4px;" title="Copy STK"></i>
+                  <i class="ri-check-double-line copy-bank-account-done-icon" style="margin-left: 4px; color: #469046; display: none;" title="Đã copy STK"></i>
+                </div>
               </div>
             </div>
             <div>
@@ -1774,7 +1778,11 @@
                 </p>
                 <p><strong>Linh Chi</strong></p>
                 <p>Ngân hàng : <strong>VietinBank</strong></p>
-                <p>STK :<strong> 101870261914</strong></p>
+                <div class="copy-bank-account-text" style="display: flex; justify-content: center; align-items: center; cursor: pointer;" onclick="handleCopyToClipboard('101870261914', this)">
+                  <p>STK :<strong> 101870261914</strong></p>
+                  <i class="ri-file-copy-line copy-bank-account-icon" style="margin-left: 4px;" title="Copy STK"></i>
+                  <i class="ri-check-double-line copy-bank-account-done-icon" style="margin-left: 4px; color: #469046; display: none;" title="Đã copy STK"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -1885,6 +1893,62 @@
         myAudio.pause();
         $(".btn_play").html('<i class="ti ti-player-play "></i>');
       }
+    }
+  </script>
+  <script>
+    var timeoutCopyBankAccount = null;
+    
+    function copyToClipboard(str) {
+      try {
+        // Check args.
+        if (typeof str !== 'string' || str.length === 0) {
+          throw new Error('No content to copy');
+        }
+
+        // New way of copying to clipboard. Returns a promise.
+        if (typeof navigator.clipboard?.writeText === 'function') {
+          return navigator.clipboard.writeText(str);
+        }
+
+        // Old way for IE11.
+        if (window.clipboardData) {
+          window.clipboardData.clearData();
+          window.clipboardData.setData('text/plain', str);
+          return Promise.resolve();
+        }
+
+        // Old way for safari.
+        const temp = document.createElement('textarea');
+        temp.value = str;
+        document.body.appendChild(temp);
+        temp.select();
+        document.execCommand('copy');
+        document.body.removeChild(temp);
+        return Promise.resolve();
+
+      } catch (err) {
+        return Promise.reject(err);
+      }
+    }
+     
+    function handleCopyToClipboard(text, element) {
+      if (timeoutCopyBankAccount) {
+        clearTimeout(timeoutCopyBankAccount);
+      }
+
+      copyToClipboard(text).then(() => {
+        $(element).find(".copy-bank-account-icon").hide();
+        $(element).find(".copy-bank-account-done-icon").show();
+
+        timeoutCopyBankAccount = setTimeout(() => {
+          $(element).find(".copy-bank-account-icon").show();
+          $(element).find(".copy-bank-account-done-icon").hide();
+        }, 2000);
+      }).catch((err) => {
+        console.error(err);
+        $(element).find(".copy-bank-account-icon").show();
+        $(element).find(".copy-bank-account-done-icon").hide();
+      });
     }
   </script>
 </html>
