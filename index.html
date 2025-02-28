@@ -1,25 +1,48 @@
 <!DOCTYPE html>
-<html lang="vi" class="light-style layout-navbar-fixed layout-wide">
+<html
+  lang="vi"
+  class="light-style layout-navbar-fixed layout-wide"
+  onclick="handleFirstPlay()"
+>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="profile" href="https://gmpg.org/xfn/11" />
 
-    <meta property="og:title" content="Mạnh Hà ❤️ Linh Chi - Save the Date">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Mạnh Hà ❤️ Linh Chi Wedding">
-    <meta property="og:url" content="https://hachiwedding.netlify.app/">
+    <meta property="og:title" content="Mạnh Hà ❤️ Linh Chi - Save the Date" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Mạnh Hà ❤️ Linh Chi Wedding" />
+    <meta property="og:url" content="https://hachiwedding.netlify.app/" />
     <meta property="og:image" content="images/05.jpg" />
-    <meta property="og:image:alt" content="Thiệp mời dự hôn lễ Mạnh Hà ❤️ Linh Chi">
-    <meta property="og:image:type" content="image/webp">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="images/05.jpg">
-    <meta name="description" content="Thiệp mời dự hôn lễ Mạnh Hà ❤️ Linh Chi" />
-    <meta name="keywords" content="wedding, hôn lễ, thiệp mời, mạnh hà, linh chi, hachi, hachi wedding"/>
+    <meta
+      property="og:image:alt"
+      content="Thiệp mời dự hôn lễ Mạnh Hà ❤️ Linh Chi"
+    />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="images/05.jpg" />
+    <meta
+      name="description"
+      content="Thiệp mời dự hôn lễ Mạnh Hà ❤️ Linh Chi"
+    />
+    <meta
+      name="keywords"
+      content="wedding, hôn lễ, thiệp mời, mạnh hà, linh chi, hachi, hachi wedding"
+    />
 
     <title>💕Mạnh Hà ❤️ Linh Chi💕</title>
     <meta name="robots" content="max-image-preview:large" />
     <style>
+      @keyframes shake-rotate {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-15deg); }
+    50% { transform: rotate(15deg); }
+    75% { transform: rotate(-15deg); }
+    100% { transform: rotate(0deg); }
+}
+#btn-gift{
+  animation: shake-rotate 0.75s ease-in-out infinite;
+}
       img:is([sizes="auto" i], [sizes^="auto," i]) {
         contain-intrinsic-size: 3000px 1500px;
       }
@@ -652,7 +675,7 @@
         <h3
           class="title-font text-primary-color tracking-in-expand uk-heading-small mb-0"
         >
-        💕 
+          💕
         </h3>
         <h3
           class="title-font text-primary-color tracking-in-expand uk-heading-small mb-0"
@@ -950,27 +973,15 @@
       >
         <div class="uk-slideshow-items" uk-height-viewport="offset-top: true; ">
           <div>
-            <img
-              src="images/05.jpg"
-              alt=""
-              uk-cover
-            />
+            <img src="images/05.jpg" alt="" uk-cover />
           </div>
 
           <div>
-            <img
-              src="images/21.jpg"
-              alt=""
-              uk-cover
-            />
+            <img src="images/21.jpg" alt="" uk-cover />
           </div>
 
           <div>
-            <img
-              src="images/02.jpg"
-              alt=""
-              uk-cover
-            />
+            <img src="images/02.jpg" alt="" uk-cover />
           </div>
         </div>
       </div>
@@ -1029,11 +1040,7 @@
               class="uk-position-relative uk-cover-container"
               style="aspect-ratio: 4/5"
             >
-              <img
-                src="images/38.jpg"
-                alt=""
-                uk-cover
-              />
+              <img src="images/38.jpg" alt="" uk-cover />
               <div
                 class="uk-position-bottom p-4 blur-bg uk-text-center text-white border border-white uk-position-small text-primary-color"
                 data-aos="fade-up"
@@ -1053,11 +1060,7 @@
               class="uk-position-relative uk-cover-container"
               style="aspect-ratio: 4/5"
             >
-              <img
-                src="images/35.jpg"
-                alt=""
-                uk-cover
-              />
+              <img src="images/35.jpg" alt="" uk-cover />
               <div
                 class="uk-position-bottom p-4 blur-bg uk-text-center text-white border border-white uk-position-small text-primary-color"
                 data-aos="fade-up"
@@ -1205,11 +1208,7 @@
                     class="uk-cover-container uk-width-1-1"
                     style="aspect-ratio: 16/9"
                   >
-                    <img
-                      src="images/29.jpg"
-                      alt=""
-                      uk-cover
-                    />
+                    <img src="images/29.jpg" alt="" uk-cover />
                   </div>
                 </div>
                 <div class="contact mt-4 uk-position-relative">
@@ -1298,11 +1297,7 @@
                     class="uk-cover-container uk-width-1-1"
                     style="aspect-ratio: 16/9"
                   >
-                    <img
-                      src="images/04.jpg"
-                      alt=""
-                      uk-cover
-                    />
+                    <img src="images/04.jpg" alt="" uk-cover />
                   </div>
                 </div>
                 <div class="contact mt-4 uk-position-relative">
@@ -1347,546 +1342,294 @@
               class="swiper-wrapper album swiper-3d-coverflow-effect"
               uk-lightbox="animation: fade"
             >
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/01.jpg"
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/01.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/02.jpg"
+                <a href="images/01.jpg">
+                  <img src="images/01.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/02.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/03.jpg"
+                <a href="images/02.jpg">
+                  <img src="images/02.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/03.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/04.jpg"
+                <a href="images/03.jpg">
+                  <img src="images/03.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/04.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/05.jpg"
+                <a href="images/04.jpg">
+                  <img src="images/04.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/05.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/06.jpg"
+                <a href="images/05.jpg">
+                  <img src="images/05.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/06.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/07.jpg"
+                <a href="images/06.jpg">
+                  <img src="images/06.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/07.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/08.jpg"
+                <a href="images/07.jpg">
+                  <img src="images/07.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/08.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/09.jpg"
+                <a href="images/08.jpg">
+                  <img src="images/08.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/09.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/10.jpg"
+                <a href="images/09.jpg">
+                  <img src="images/09.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/10.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/11.jpg"
+                <a href="images/10.jpg">
+                  <img src="images/10.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/11.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/12.jpg"
+                <a href="images/11.jpg">
+                  <img src="images/11.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/12.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/13.jpg"
+                <a href="images/12.jpg">
+                  <img src="images/12.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/13.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/14.jpg"
+                <a href="images/13.jpg">
+                  <img src="images/13.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/14.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/15.jpg"
+                <a href="images/14.jpg">
+                  <img src="images/14.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/15.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/16.jpg"
+                <a href="images/15.jpg">
+                  <img src="images/15.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/16.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/17.jpg"
+                <a href="images/16.jpg">
+                  <img src="images/16.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/17.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/18.jpg"
+                <a href="images/17.jpg">
+                  <img src="images/17.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/18.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/19.jpg"
+                <a href="images/18.jpg">
+                  <img src="images/18.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/19.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/20.jpg"
+                <a href="images/19.jpg">
+                  <img src="images/19.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/20.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/21.jpg"
+                <a href="images/20.jpg">
+                  <img src="images/20.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/21.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/22.jpg"
+                <a href="images/21.jpg">
+                  <img src="images/21.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/22.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/23.jpg"
+                <a href="images/22.jpg">
+                  <img src="images/22.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/23.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/24.jpg"
+                <a href="images/23.jpg">
+                  <img src="images/23.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/24.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/25.jpg"
+                <a href="images/24.jpg">
+                  <img src="images/24.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/25.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/26.jpg"
+                <a href="images/25.jpg">
+                  <img src="images/25.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/26.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/27.jpg"
+                <a href="images/26.jpg">
+                  <img src="images/26.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/27.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/28.jpg"
+                <a href="images/27.jpg">
+                  <img src="images/27.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/28.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/29.jpg"
+                <a href="images/28.jpg">
+                  <img src="images/28.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/29.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/30.jpg"
+                <a href="images/29.jpg">
+                  <img src="images/29.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/30.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/31.jpg"
+                <a href="images/30.jpg">
+                  <img src="images/30.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/31.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/32.jpg"
+                <a href="images/31.jpg">
+                  <img src="images/31.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/32.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/33.jpg"
+                <a href="images/32.jpg">
+                  <img src="images/32.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/33.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/34.jpg"
+                <a href="images/33.jpg">
+                  <img src="images/33.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/34.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/35.jpg"
+                <a href="images/34.jpg">
+                  <img src="images/34.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/35.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
-            <div
-              class="swiper-slide uk-cover-container uk-box-shadow-bottom"
-              style="aspect-ratio: 1/1"
-            >
-              <a
-                href="images/36.jpg"
+                <a href="images/35.jpg">
+                  <img src="images/35.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
+              <div
+                class="swiper-slide uk-cover-container uk-box-shadow-bottom"
+                style="aspect-ratio: 1/1"
               >
-                <img
-                  src="images/36.jpg"
-                  alt=""
-                  class=""
-                  uk-cover
-                />
-              </a>
-            </div>
+                <a href="images/36.jpg">
+                  <img src="images/36.jpg" alt="" class="" uk-cover />
+                </a>
+              </div>
             </div>
             <div class="swiper-pagination"></div>
           </div>
@@ -1899,9 +1642,7 @@
     <section
       id="wedding-timeline"
       class="wedding-timeline uk-background-cover uk-section uk-position-relative uk-background-cover"
-      style="
-        background-image: url('images/18.jpg');
-      "
+      style="background-image: url('images/18.jpg')"
     >
       <div class="uk-position-relative uk-container uk-width-1-2@l">
         <div
@@ -1924,7 +1665,7 @@
             class="w-items uk-text-center text-white mb-4 uk-margin-large-top"
             data-aos="fade-up"
           >
-          <h4 class="title-font text-white mb-0">Ngày 08 tháng 3</h4>
+            <h4 class="title-font text-white mb-0">Ngày 08 tháng 3</h4>
             <h4 class="title-font text-white mb-0">15h00 - 16h00</h4>
             <i class="ri-star-fill"></i>
             <h5 class="mb-0">Đón khách & Chụp ảnh</h5>
@@ -1945,7 +1686,7 @@
             class="w-items uk-text-center text-white mb-4 uk-margin-large-top"
             data-aos="fade-up"
           >
-          <h4 class="title-font text-white mb-0">Ngày 09 tháng 3</h4>
+            <h4 class="title-font text-white mb-0">Ngày 09 tháng 3</h4>
             <h4 class="title-font text-white mb-0">6h00</h4>
             <i class="ri-star-fill"></i>
             <h5 class="mb-0">Lễ Vu Quy Tại Nhà Cô Dâu</h5>
@@ -2019,6 +1760,7 @@
     >
       <a
         href="#modal-gift"
+        id="btn-gift"
         class="btn-icon uk-icon-link uk-position-relative bg-primary-color"
         uk-tooltip="Gửi quà cho cặp đôi"
         uk-toggle
@@ -2055,10 +1797,27 @@
                 </p>
                 <p><strong>Mạnh Hà</strong></p>
                 <p>Ngân hàng : <strong>TechcomBank</strong></p>
-                <div class="copy-bank-account-text" style="display: flex; justify-content: center; align-items: center; cursor: pointer;" onclick="handleCopyToClipboard('19036225619013', this)">
+                <div
+                  class="copy-bank-account-text"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                  "
+                  onclick="handleCopyToClipboard('19036225619013', this)"
+                >
                   <p>STK : <strong>19036225619013</strong></p>
-                  <i class="ri-file-copy-line copy-bank-account-icon" style="margin-left: 4px;" title="Copy STK"></i>
-                  <i class="ri-check-double-line copy-bank-account-done-icon" style="margin-left: 4px; color: #469046; display: none;" title="Đã copy STK"></i>
+                  <i
+                    class="ri-file-copy-line copy-bank-account-icon"
+                    style="margin-left: 4px"
+                    title="Copy STK"
+                  ></i>
+                  <i
+                    class="ri-check-double-line copy-bank-account-done-icon"
+                    style="margin-left: 4px; color: #469046; display: none"
+                    title="Đã copy STK"
+                  ></i>
                 </div>
               </div>
             </div>
@@ -2080,10 +1839,27 @@
                 </p>
                 <p><strong>Linh Chi</strong></p>
                 <p>Ngân hàng : <strong>VietinBank</strong></p>
-                <div class="copy-bank-account-text" style="display: flex; justify-content: center; align-items: center; cursor: pointer;" onclick="handleCopyToClipboard('101870261914', this)">
+                <div
+                  class="copy-bank-account-text"
+                  style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                  "
+                  onclick="handleCopyToClipboard('101870261914', this)"
+                >
                   <p>STK :<strong> 101870261914</strong></p>
-                  <i class="ri-file-copy-line copy-bank-account-icon" style="margin-left: 4px;" title="Copy STK"></i>
-                  <i class="ri-check-double-line copy-bank-account-done-icon" style="margin-left: 4px; color: #469046; display: none;" title="Đã copy STK"></i>
+                  <i
+                    class="ri-file-copy-line copy-bank-account-icon"
+                    style="margin-left: 4px"
+                    title="Copy STK"
+                  ></i>
+                  <i
+                    class="ri-check-double-line copy-bank-account-done-icon"
+                    style="margin-left: 4px; color: #469046; display: none"
+                    title="Đã copy STK"
+                  ></i>
                 </div>
               </div>
             </div>
@@ -2126,11 +1902,8 @@
   <!-- end wrapper -->
   <!-- NHẠC NỀN -->
   <div class="audio-play d-none">
-    <audio id="audio_play" controls autoplay preload="auto">
-      <source
-        src="media/A_Thousand_Year.mp3"
-        type="audio/mpeg"
-      />
+    <audio id="audio_play" controls preload="auto">
+      <source src="media/A_Thousand_Year.mp3" type="audio/mpeg" />
     </audio>
   </div>
   <div
@@ -2182,13 +1955,17 @@
   </script>
   <script>
     var myAudio = document.getElementById("audio_play");
-    // myAudio.play();
-    if (myAudio.paused) {
-      $(".btn_play").html('<i class="ti ti-player-play "></i>');
-    }else{
-      $(".btn_play").html(
-          '<span class="spinner-border border-0 d-flex justify-content-center align-items-center"><i class="ti ti-music "></i> </span>'
-        );
+
+    myAudio.pause();
+    $(".btn_play").html('<i class="ti ti-player-play "></i>');
+
+    var isFirstClick = true;
+
+    function handleFirstPlay() {
+      if (isFirstClick) {
+        togglePlay();
+        isFirstClick = false;
+      }
     }
     function togglePlay() {
       if (myAudio.paused) {
@@ -2204,58 +1981,59 @@
   </script>
   <script>
     var timeoutCopyBankAccount = null;
-    
+
     function copyToClipboard(str) {
       try {
         // Check args.
-        if (typeof str !== 'string' || str.length === 0) {
-          throw new Error('No content to copy');
+        if (typeof str !== "string" || str.length === 0) {
+          throw new Error("No content to copy");
         }
 
         // New way of copying to clipboard. Returns a promise.
-        if (typeof navigator.clipboard?.writeText === 'function') {
+        if (typeof navigator.clipboard?.writeText === "function") {
           return navigator.clipboard.writeText(str);
         }
 
         // Old way for IE11.
         if (window.clipboardData) {
           window.clipboardData.clearData();
-          window.clipboardData.setData('text/plain', str);
+          window.clipboardData.setData("text/plain", str);
           return Promise.resolve();
         }
 
         // Old way for safari.
-        const temp = document.createElement('textarea');
+        const temp = document.createElement("textarea");
         temp.value = str;
         document.body.appendChild(temp);
         temp.select();
-        document.execCommand('copy');
+        document.execCommand("copy");
         document.body.removeChild(temp);
         return Promise.resolve();
-
       } catch (err) {
         return Promise.reject(err);
       }
     }
-     
+
     function handleCopyToClipboard(text, element) {
       if (timeoutCopyBankAccount) {
         clearTimeout(timeoutCopyBankAccount);
       }
 
-      copyToClipboard(text).then(() => {
-        $(element).find(".copy-bank-account-icon").hide();
-        $(element).find(".copy-bank-account-done-icon").show();
+      copyToClipboard(text)
+        .then(() => {
+          $(element).find(".copy-bank-account-icon").hide();
+          $(element).find(".copy-bank-account-done-icon").show();
 
-        timeoutCopyBankAccount = setTimeout(() => {
+          timeoutCopyBankAccount = setTimeout(() => {
+            $(element).find(".copy-bank-account-icon").show();
+            $(element).find(".copy-bank-account-done-icon").hide();
+          }, 2000);
+        })
+        .catch((err) => {
+          console.error(err);
           $(element).find(".copy-bank-account-icon").show();
           $(element).find(".copy-bank-account-done-icon").hide();
-        }, 2000);
-      }).catch((err) => {
-        console.error(err);
-        $(element).find(".copy-bank-account-icon").show();
-        $(element).find(".copy-bank-account-done-icon").hide();
-      });
+        });
     }
   </script>
 </html>
